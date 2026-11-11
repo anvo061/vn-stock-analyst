@@ -1,0 +1,9 @@
+{
+  "symbols": {
+    "FPT": {"name": "CTCP FPT", "aliases": ["FPT Corporation", "Tập đoàn FPT"]},
+    "VCB": {"name": "Ngân hàng TMCP Ngoại thương Việt Nam", "aliases": ["Vietcombank"]},
+    "HPG": {"name": "CTCP Tập đoàn Hòa Phát", "aliases": ["Hòa Phát", "Hoà Phát"]},
+    "MWG": {"name": "CTCP Đầu tư Thế Giới Di Động", "aliases": ["Thế Giới Di Động", "Bách Hóa Xanh", "Bách Hoá Xanh"]},
+    "SSI": {"name": "CTCP Chứng khoán SSI", "aliases": ["Chứng khoán SSI"]}
+  }
+}

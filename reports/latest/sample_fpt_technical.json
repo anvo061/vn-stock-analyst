@@ -1,0 +1,152 @@
+{
+  "symbol": "FPT",
+  "status": "live",
+  "as_of": "2026-11-11",
+  "source": "vietcap",
+  "ma20": {
+    "value": 54215.0,
+    "slope_pct_5": -2.832,
+    "slope_direction": "falling",
+    "distance_pct": -6.11,
+    "price_position": "below",
+    "cross_20_50": {
+      "state": "sma20_below_sma50",
+      "last_cross": {
+        "type": "death_cross",
+        "date": "2026-10-09",
+        "sessions_ago": 23
+      },
+      "rule": "golden_cross/death_cross nếu SMA20 cắt SMA50 trong 10 phiên gần nhất; nếu không, nêu SMA20 đang trên hay dưới SMA50."
+    }
+  },
+  "ma50": {
+    "value": 59856.89,
+    "slope_pct_5": -2.313,
+    "slope_direction": "falling",
+    "distance_pct": -14.96,
+    "price_position": "below",
+    "cross_20_50": {
+      "state": "sma20_below_sma50",
+      "last_cross": {
+        "type": "death_cross",
+        "date": "2026-10-09",
+        "sessions_ago": 23
+      },
+      "rule": "golden_cross/death_cross nếu SMA20 cắt SMA50 trong 10 phiên gần nhất; nếu không, nêu SMA20 đang trên hay dưới SMA50."
+    }
+  },
+  "rsi": {
+    "value": 30.99,
+    "period": 14,
+    "state": "neutral"
+  },
+  "macd": {
+    "macd_line": -2525.61,
+    "signal_line": -2491.11,
+    "histogram": -34.5,
+    "position": "below_signal",
+    "histogram_trend": "contracting",
+    "last_cross": {
+      "type": "cross_down",
+      "date": "2026-09-18",
+      "sessions_ago": 38
+    },
+    "params": [
+      12,
+      26,
+      9
+    ]
+  },
+  "bollinger_bands": {
+    "upper": 59914.57,
+    "middle": 54215.0,
+    "lower": 48515.43,
+    "bandwidth": 0.2103,
+    "percent_b": 0.2092,
+    "squeeze": false,
+    "price_position": "lower_half",
+    "rule": "squeeze khi độ rộng dải là thấp nhất 120 phiên.",
+    "params": [
+      20,
+      2
+    ]
+  },
+  "volume_analysis": {
+    "volume": 6533000.0,
+    "vol_ma20": 8312645.0,
+    "vol_ratio": 0.786,
+    "spike": false,
+    "rule": "spike khi vol_ratio ≥ 2.0. Khối lượng không được điều chỉnh theo cổ tức/chia tách."
+  },
+  "ichimoku": {
+    "tenkan_sen": 52075.0,
+    "kijun_sen": 55525.0,
+    "senkou_span_a": 63550.17,
+    "senkou_span_b": 61955.16,
+    "cloud_top": 63550.17,
+    "cloud_bottom": 61955.16,
+    "future_span_a": 53800.0,
+    "future_span_b": 58775.34,
+    "future_cloud": "bearish",
+    "chikou_span": 50900.0,
+    "chikou_vs_price_26_ago": "below",
+    "price_vs_cloud": "below_cloud",
+    "tk_relation": "tenkan_below_kijun",
+    "tk_last_cross": {
+      "type": "bearish_cross",
+      "date": "2026-10-01",
+      "sessions_ago": 29
+    },
+    "params": [
+      9,
+      26,
+      52
+    ],
+    "rule": "senkou_span_a/b là mây đối diện phiên hiện tại (tính 26 phiên trước); future_span_a/b là mây sẽ vẽ 26 phiên tới."
+  },
+  "fibonacci": {
+    "swing_high": 70637.07,
+    "swing_high_date": "2026-06-03",
+    "swing_low": 49550.0,
+    "swing_low_date": "2026-11-03",
+    "direction": "down",
+    "retracement": {
+      "0.236": 54526.55,
+      "0.382": 57605.26,
+      "0.5": 60093.54,
+      "0.618": 62581.81,
+      "0.786": 66124.44
+    },
+    "extension": {
+      "1.272": 43814.32,
+      "1.618": 36518.19
+    },
+    "lookback_sessions": 120,
+    "rule": "Đỉnh/đáy là giá cao nhất/thấp nhất 120 phiên gần nhất; direction=up nếu đáy đến trước đỉnh. Up: thoái lui = đỉnh − r×biên độ, mở rộng = đáy + e×biên độ. Down: ngược lại."
+  },
+  "trade_levels": {
+    "close": 50900.0,
+    "entry_zone": null,
+    "target_1": {
+      "price": 55854.82,
+      "source": "resistance"
+    },
+    "target_2": {
+      "price": 57605.26,
+      "source": "fib_0.382"
+    },
+    "stop_loss": null,
+    "risk_reward": null,
+    "notes": [
+      "Không có MA20, Kijun hay Fibonacci 0,382-0,618 nằm trong 8% dưới giá đóng cửa: chưa có vùng mua theo quy tắc."
+    ],
+    "rules": "Vùng mua: từ mức thấp nhất trong MA20, Kijun, Fib 0,382/0,5/0,618 nằm trong 8% dưới giá đóng cửa, đến giá đóng cửa. Mục tiêu 1: mức gần nhất trên giá trong kháng cự đầu tiên, dải Bollinger trên, đỉnh sóng. Mục tiêu 2: mức đầu tiên cao hơn mục tiêu 1 trong Fib mở rộng 1,272, 1,618 (sóng tăng) hoặc các mốc thoái lui phía trên (sóng giảm). Cắt lỗ: mức cao nhất trong MA50, đáy mây, Fib 0,618/0,786 nằm dưới vùng mua, trừ 1%. R:R tính từ giữa vùng mua đến mục tiêu 1 và cắt lỗ.",
+    "disclaimer": "Mức giá tính theo quy tắc cố định trên giá đã điều chỉnh, không làm tròn theo bước giá; không phải tư vấn đầu tư cá nhân."
+  },
+  "warnings": [
+    "Có 2 ngày điều chỉnh trong cửa sổ (2026-05-28, 2026-09-21 là gần nhất): giá lịch sử, ngưỡng và đỉnh/đáy 52 tuần là giá điều chỉnh, không phải giá khớp thực tế; khối lượng không được điều chỉnh nên OBV/MFI có sai số qua các ngày này.",
+    "Dữ liệu chưa đủ 52 tuần (từ 2026-01-21): đỉnh/đáy 52 tuần trả null.",
+    "Không đủ dữ liệu để tính thay đổi giá YTD, 1Y.",
+    "Mẫu nhỏ không phải bằng chứng và tần suất trong quá khứ không dự báo tương lai; các cửa sổ lợi suất có thể chồng lấn nên mẫu không độc lập."
+  ]
+}

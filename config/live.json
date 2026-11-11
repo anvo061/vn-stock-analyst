@@ -1,0 +1,5 @@
+{
+  "sources": ["vietcap", "kbs"],
+  "allowed_origins": [],
+  "port": 8787
+}

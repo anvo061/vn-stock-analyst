@@ -1,0 +1,46 @@
+# --- environments and build output -------------------------------------------------------
+.venv/
+node_modules/
+web/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- secrets -------------------------------------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+
+# --- databases and runtime data: never committed -------------------------------------------
+# data/ holds invite hashes, the quote log, the news database, downloaded filings and replay
+# caches. The whole folder stays local; the specific paths are listed so a future change to
+# the folder rule cannot let them through unnoticed.
+*.db
+*.sqlite
+*.sqlite3
+data/
+data/live/invites.json
+data/live/quotes.db
+data/news.db
+data/filings/
+data/replay/
+
+# --- reports: only the synced snapshot for review is shared --------------------------------
+reports/*
+!reports/latest/
+!reports/latest/**
+# a stray database or secret inside the snapshot still stays out
+reports/latest/**/*.db
+reports/latest/**/.env
+
+# --- always shared (source, tests, agent definitions, secret-free config) -----------------
+!stock_analyst/
+!web/src/
+!web/public/
+!tests/
+!agent/
+!config/watchlist.json
+!config/live.json
+!config/holidays.json
+!STATUS_FOR_GEMINI.md
